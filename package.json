@@ -1,0 +1,61 @@
+{
+	"name": "nukelear",
+	"version": "1.1.0",
+	"description": "",
+	"main": "./dist/index.js",
+	"scripts": {
+		"build": "npx eslint . && npm run clean && tsc",
+		"clean": "rm -rf dist",
+		"lint": "eslint . ",
+		"lint:fix": "eslint . --fix",
+		"format:check": "prettier --check .",
+		"format": "prettier --write .",
+		"dev": "tsx index.ts",
+		"deploy": "npm run build && npm publish --access public",
+		"prepare": "husky"
+	},
+	"bin": {
+		"nukelear": "./dist/index.js"
+	},
+	"files": [
+		"dist"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/joel-patole/Nukelear.git"
+	},
+	"keywords": [
+		"nukelear",
+		"cli",
+		"tools"
+	],
+	"author": "Joel Patole <joelpatole1@gmail.com> (https://github.com/joel-patole)",
+	"bugs": {
+		"url": "https://github.com/joel-patole/Nukelear/issues",
+		"email": "joelpatole1@gmail.com"
+	},
+	"homepage": "https://github.com/joel-patole/Nukelear#readme",
+	"license": "MIT",
+	"type": "module",
+	"packageManager": "pnpm@10.27.0",
+	"dependencies": {
+		"@clack/prompts": "^0.11.0",
+		"chalk": "^5.6.2",
+		"commander": "^14.0.2",
+		"tsx": "^4.21.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^20.3.0",
+		"@commitlint/config-conventional": "^20.3.0",
+		"@eslint/js": "^9.39.2",
+		"@eslint/json": "^0.14.0",
+		"@eslint/markdown": "^7.5.1",
+		"@types/node": "^25.0.3",
+		"eslint": "^9.39.2",
+		"globals": "^17.0.0",
+		"husky": "^9.1.7",
+		"prettier": "^3.7.4",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.51.0"
+	}
+}
